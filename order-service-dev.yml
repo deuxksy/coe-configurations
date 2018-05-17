@@ -1,6 +1,6 @@
 coe:
   application:
-    customer-service: customer-service
+    customer: customer-service
 
 feign:
   client:
