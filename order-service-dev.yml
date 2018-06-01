@@ -12,9 +12,4 @@ feign:
 stubrunner:
   ids: "org.coe.msa:customer-service:+:stubs:6060"
   work-offline: true
-  
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+ 
