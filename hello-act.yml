@@ -1,7 +1,7 @@
 server:
   port: 8090
 message:
-  act: "hello-sds"
+  act: "bradley"
 spring:
   rabbitmq:
     host: localhost
