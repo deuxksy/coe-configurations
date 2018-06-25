@@ -1,15 +1,33 @@
+spring:
+  application:
+    name: order-service
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Feign Options
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 coe:
   application:
-    customer-service: customer-service
+    customer-service: CUSTOMER-SERVICE
 
 feign:
+  hystrix:
+    enabled: true
   client:
     config:
       default:
         connectTimeout: 600000
         readTimeout: 600000
 
-stubrunner:
-  ids: "org.coe.msa:customer-service:+:stubs:6060"
-  work-offline: true
- 
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Endpoint output options for Hystrix Stream
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      enabled: true
+      show-details: always
