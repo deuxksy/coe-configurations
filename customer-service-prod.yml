@@ -9,7 +9,7 @@ spring:
   application:
     name: customer-service
   rabbitmq:
-    host: ${RABBITMQ_SERVER_URL:http://localhost}
+    host: ${RABBITMQ_SERVER_URL:localhost}
     port: ${RABBITMQ_SERVER_PORT:5672}
     username: username
     password: password
