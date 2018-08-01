@@ -60,7 +60,7 @@ zuul:
   ignoredServices: '*'
   sensitive-headers:
   routes:
-    customer:
+    customer-service:
       path: /api/v1/customers/**
       serviceId: customer-service
       strip-prefix: false
