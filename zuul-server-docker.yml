@@ -60,11 +60,11 @@ zuul:
   ignoredServices: '*'
   sensitive-headers:
   routes:
-    customer:
+    customer-service:
       path: /api/v1/customers/**
       serviceId: customer-service
       strip-prefix: false
-    order:
+    order-service:
       path: /api/v1/orders/**
       serviceId: ORDER-SERVICE
       strip-prefix: false
