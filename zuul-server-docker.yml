@@ -66,7 +66,7 @@ zuul:
       strip-prefix: false
     order-service:
       path: /api/v1/orders/**
-      serviceId: ORDER-SERVICE
+      serviceId: order-service
       strip-prefix: false
     email:
       path: /api/v1/emails/**
