@@ -62,7 +62,7 @@ zuul:
   routes:
     customer:
       path: /api/v1/customers/**
-      serviceId: CUSTOMER-SERVICE
+      serviceId: customer-service
       strip-prefix: false
     order:
       path: /api/v1/orders/**
