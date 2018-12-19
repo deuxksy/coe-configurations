@@ -1,0 +1,51 @@
+spring:
+  profiles:
+    active: dev
+  jpa:
+    generate-ddl: true
+    ddl-auto: update
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/h2/PRODUCT
+    username: dtuser
+    password:
+
+server:
+    port: 9010
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9008/eureka/
+  instance:
+    preferIpAddress: true
+
+feign:
+  hystrix:
+    enabled: true
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api/v1/products/v2/api-docs
+
+application:
+  greeting:
+    text: coe-test
+
+#stocks-service:
+#  ribbon:
+#    eureka:
+#      enabled: false
+#    listOfServers: http://localhost:9012
+#logging:
+#  level:
+#    root: debug
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
