@@ -32,16 +32,7 @@ springfox:
 
 application:
   name:
-    text: coe-sury
-
-#stocks-service:
-#  ribbon:
-#    eureka:
-#      enabled: false
-#    listOfServers: http://localhost:9012
-#logging:
-#  level:
-#    root: debug
+    text: coe-dev
 
 management:
   endpoints:
