@@ -31,7 +31,7 @@ springfox:
         path: /api/v1/products/v2/api-docs
 
 application:
-  greeting:
+  name:
     text: coe-sury
 
 #stocks-service:
