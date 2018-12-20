@@ -43,9 +43,8 @@ application:
 #  level:
 #    root: debug
 
-
 management:
   endpoints:
     web:
       exposure:
-        include: 'hystrix.stream'
+        include: 'hystrix.stream,refresh'
