@@ -32,7 +32,7 @@ springfox:
 
 application:
   greeting:
-    text: coe-test
+    text: coe-hi
 
 #stocks-service:
 #  ribbon:
