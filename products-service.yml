@@ -1,6 +1,6 @@
 server:
   port: 9010
-
+  
 # TODO: 09-1 products.prefix
 products:
   prefix: 'Stu00'
@@ -17,12 +17,11 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     username: dtuser
     password: service
-#  TODO: 13-2 application.yml config client
-#  cloud: 
-#    config:
-#      discovery:
-#        enabled: true
-#        service-id: config-server-ip # eureka에 등록된 config service 이름
+  cloud: 
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server-ip # eureka에 등록된 config service 이름
 
 springfox:
   documentation:
@@ -30,31 +29,23 @@ springfox:
       v2:
         path: /api/v1/products/v2/api-docs
         
-#TODO: 09-3 application.yml stock service url
-#stocks-service:
-#  ribbon:
-#    listOfServers: 강사PC-ip:9012
+feign:
+  hystrix:
+    enabled: true
 
-#TODO: 10-1 application.yml hystrix enabled true
-#feign:
-#  hystrix:
-#    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
 
-#TODO: 10-5 application.yml hystrix stream
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: 'hystrix.stream'
-
-#TODO: 11-2 application.yml eureka
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://Eureka서버-ip:9008/eureka/
-#    enabled: true
-#  instance:
-#    preferIpAddress: true # 서비스간 통신 시 hostname 보다 ip 를 우선 사용
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://Eureka서버-ip:9008/eureka/
+    enabled: true
+  instance:
+    preferIpAddress: true # 서비스간 통신 시 hostname 보다 ip 를 우선 사용
 
 #TODO: 14-2 application.yml logback
 #logging:
