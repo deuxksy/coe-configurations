@@ -1,5 +1,5 @@
 products:
-  prefix: 'MSA'
+  prefix: 'GOOD'
 
 spring:
   jpa:
