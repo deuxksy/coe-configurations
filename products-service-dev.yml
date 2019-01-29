@@ -1,5 +1,5 @@
 products:
-  prefix: 'COE'
+  prefix: 'GOOD'
 
 spring:
   profiles:
