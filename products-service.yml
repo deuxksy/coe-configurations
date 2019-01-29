@@ -1,5 +1,5 @@
 products:
-  prefix: 'BEFORE'
+  prefix: 'E2E00'
 
 spring:
   jpa:
