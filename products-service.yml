@@ -2,8 +2,6 @@ products:
   prefix: 'GOOD'
 
 spring:
-  profiles:
-    active: dev
   jpa:
     generate-ddl: true
     hibernate:
