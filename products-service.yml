@@ -1,13 +1,9 @@
-server:
-  port: 9010
-  
-# TODO: 09-1 products.prefix
 products:
-  prefix: 'Stu00'
+  prefix: 'GOOD'
 
 spring:
-  application:
-    name: products-service
+  profiles:
+    active: dev
   jpa:
     generate-ddl: true
     hibernate:
@@ -17,11 +13,10 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     username: dtuser
     password: service
-  cloud: 
-    config:
-      discovery:
-        enabled: true
-        service-id: config-server-ip # eureka에 등록된 config service 이름
+
+feign:
+  hystrix:
+    enabled: true
 
 springfox:
   documentation:
@@ -29,27 +24,8 @@ springfox:
       v2:
         path: /api/v1/products/v2/api-docs
         
-feign:
-  hystrix:
-    enabled: true
-
 management:
   endpoints:
     web:
       exposure:
-        include: 'hystrix.stream'
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://Eureka서버-ip:9008/eureka/
-    enabled: true
-  instance:
-    preferIpAddress: true # 서비스간 통신 시 hostname 보다 ip 를 우선 사용
-
-#TODO: 14-2 application.yml logback
-#logging:
-#  level:
-#    root: INFO
-#    com.samsungsds: INFO
-#  file: /logs/application.log
+        include: 'hystrix.stream,refresh'
