@@ -1,5 +1,5 @@
 products:
-  prefix: 'E2E'
+  prefix: 'MSA'
 
 spring:
   jpa:
