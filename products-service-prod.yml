@@ -1,18 +1,18 @@
+products:
+  prefix: 'GOOD'
+
 spring:
   profiles:
     active: prod
   jpa:
     generate-ddl: true
-    ddl-auto: update
+    hibernate:
+      ddl-auto: update
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:~/h2/PRODUCT
+    url: jdbc:mariadb://localhost:3306/dt
+    driver-class-name: org.mariadb.jdbc.Driver
     username: dtuser
-    password:
-
-server:
-    port: 9010
-
+    password: service
 
 feign:
   hystrix:
@@ -23,11 +23,7 @@ springfox:
     swagger:
       v2:
         path: /api/v1/products/v2/api-docs
-
-application:
-  name:
-    text: sds-prod
-
+        
 management:
   endpoints:
     web:
