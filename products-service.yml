@@ -1,5 +1,5 @@
 products:
-  prefix: 'VERY GOOD'
+  prefix: 'BEFORE'
 
 spring:
   jpa:
