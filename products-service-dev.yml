@@ -1,3 +1,6 @@
+products:
+  prefix: 'GOOD'
+
 spring:
   profiles:
     active: dev
